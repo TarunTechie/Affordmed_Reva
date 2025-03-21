@@ -1,7 +1,7 @@
 import axios from "axios";
 import { client } from "./client";
 export const api = axios.create({
-    baseURL: "http://20.244.56.144/test",
+  baseURL: "http://20.244.56.144/test",
 })
 
 async function getToken()

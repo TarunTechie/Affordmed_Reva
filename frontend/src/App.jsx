@@ -1,9 +1,22 @@
-import { useState } from 'react'
 import './App.css'
 import Header from './components/header'
 import { useNavigate } from 'react-router-dom'
+import { api } from './constants/api'
+import { useEffect } from 'react'
 function App() {
-  const nav=useNavigate()
+  const nav = useNavigate()
+
+  async function getUsers() {
+    try {
+      const results = await api.get('/users')
+      console.log(results.data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+  useEffect(() => {
+    getUsers()
+  },[])
   return (
     <div>
       <Header />

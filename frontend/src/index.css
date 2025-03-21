@@ -38,16 +38,19 @@ img
 {
     display: grid;
     justify-content: center;
+    gap:20px
 }
 
 .post
 {
     border: 1px solid black;
     padding:5%;
-    width: fit-content;
     font-family: Arial, sans-serif;
     border-radius: 5%;
     margin: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin:auto;
 }
 .postheader
 {
@@ -65,6 +68,8 @@ img
 {
     width: 20vw;
     height: 40vh;
+    display: block;
+    margin:10px auto;
 }
 .interaction img
 {
@@ -74,4 +79,17 @@ img
 {
     background-color: white;
     border: none;
+}
+
+.comments img
+{
+    width: 20px;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 100%;
+}
+
+.comments
+{
+    display: flex;
 }
