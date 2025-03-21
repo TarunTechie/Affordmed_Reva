@@ -27,7 +27,7 @@ Start the server
 
 ### To run the backend
 ```bash
-  cd server
+  cd backend
 ```
 Install dependencies
 
