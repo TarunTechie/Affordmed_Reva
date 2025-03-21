@@ -32,8 +32,10 @@ export default function Post({id,userid,content})
             <button><img src="./logos/comment.svg"/></button>
             </div>
             </div>
-            <div style={{marginInline:"10%"}}>
-                {comments.map((c) => (<Comment id={id} />))}
+            <div style={{alignContent:"center"}}>
+                {(comments[id] || []).map((comment, index) => (
+                    <Comment userid={comment.useId} content={comment.content}/>
+                ))}
             </div>
         </div>
     )
